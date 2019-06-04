@@ -9,7 +9,7 @@ type TwetApp () =
     inherit NUIApplication ()
 
 
-    member this.Initialize() =
+    member __.Initialize() =
         Window.Instance.BackgroundColor <- Color.Black
         let mWindowSize = Window.Instance.Size
 
