@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+  xmlns="http://tizen.org/ns/packages"
+  api-version="5"
+  package="net.radiantdynamics.Twet"
+  version="0.1.0"
+>
+  <profile name="wearable" />
+  <ui-application
+    appid="net.radiantdynamics.Twet"
+    exec="Twet.dll"
+    type="dotnet"
+    multiple="false"
+    taskmanage="true"
+    nodisplay="false"
+    launch_mode="single"
+  >
+    <label>Twet</label>
+    <icon>icon.png</icon>
+    <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
+  </ui-application>
+</manifest>
