@@ -1,38 +1,22 @@
-﻿module Twet
+﻿module Twet.Main
 
 
-open Tizen.NUI
-open Tizen.NUI.BaseComponents
+open Xamarin.Forms
 
 
-type TwetApp () =
-    inherit NUIApplication ()
-
-
-    member __.Initialize() =
-        Window.Instance.BackgroundColor <- Color.Black
-        let mWindowSize = Window.Instance.Size
-
-        let title = new TextLabel("ayy lmao")
-        title.HorizontalAlignment <- HorizontalAlignment.Center
-        title.VerticalAlignment <- VerticalAlignment.Center
-        title.TextColor <- Color.White
-        title.PositionUsesPivotPoint <- true
-        title.ParentOrigin <- ParentOrigin.TopCenter
-        title.PivotPoint <- PivotPoint.TopCenter
-        title.Position2D <- new Position2D(0, mWindowSize.Height / 10)
-        title.FontFamily <- "Samsung One 600"
-        title.MultiLine <- false
-        title.PointSize <- 10.0f
-        Window.Instance.GetDefaultLayer().Add(title)
-
+type Program () =
+    inherit Platform.Tizen.FormsApplication ()
 
     override this.OnCreate() =
         base.OnCreate()
-        this.Initialize()
+        this.LoadApplication(App.App())
+
 
 
 [<EntryPoint>]
 let main args =
-    (new TwetApp()).Run(args)
+    let app = new Program()
+    Platform.Tizen.Forms.Init(app)
+    Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init()
+    app.Run(args)
     0

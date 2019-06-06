@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>tizen41</TargetFramework>
     <TargetFSharpCoreVersion>4.6.2</TargetFSharpCoreVersion>
   </PropertyGroup>
 
@@ -19,15 +19,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="TwetApp.fs" />
     <Compile Include="Twet.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Update="FSharp.Core" Version="4.6.2" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
     <PackageReference Include="Tizen.NET" Version="5.0.0.14629">
       <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>
     <PackageReference Include="Tizen.NET.Sdk" Version="1.0.1" />
+    <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.2.0" />
   </ItemGroup>
 
 </Project>
