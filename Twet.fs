@@ -27,9 +27,14 @@ type TwetApp () =
         title.PointSize <- 10.0f
         Window.Instance.GetDefaultLayer().Add(title)
 
+        // Works only when compiling in release mode
+        // (possibly related to FSharp.Core bundling?)
         match Some "A" with
         | Some x -> Log.Debug("Twet", x)
         | _ -> ()
+
+        // Crashes the app
+        // Window.Instance.KeyEvent |> ignore
 
 
     override this.OnCreate() =
