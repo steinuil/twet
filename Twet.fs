@@ -1,6 +1,7 @@
 ﻿module Twet
 
 
+open Tizen
 open Tizen.NUI
 open Tizen.NUI.BaseComponents
 
@@ -25,6 +26,10 @@ type TwetApp () =
         title.MultiLine <- false
         title.PointSize <- 10.0f
         Window.Instance.GetDefaultLayer().Add(title)
+
+        match Some "A" with
+        | Some x -> Log.Debug("Twet", x)
+        | _ -> ()
 
 
     override this.OnCreate() =
