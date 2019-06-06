@@ -8,7 +8,7 @@
   <profile name="wearable" />
   <ui-application
     appid="net.radiantdynamics.Twet"
-    exec="Twet.dll"
+    exec="Twet.Tizen.dll"
     type="dotnet"
     multiple="false"
     taskmanage="true"

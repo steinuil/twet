@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Twet.fs" />
+    <Compile Include="Twet.Tizen.fs" />
   </ItemGroup>
 
   <ItemGroup>
