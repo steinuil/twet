@@ -10,7 +10,7 @@ type App () =
     inherit NUIApplication ()
 
 
-    member __.Initialize() =
+    member this.Initialize() =
         Window.Instance.BackgroundColor <- Color.Black
         let mWindowSize = Window.Instance.Size
 
@@ -35,8 +35,11 @@ type App () =
         // | Some x -> Log.Debug("Twet", x)
         // | _ -> ()
 
-        // Crashes the app
-        // Window.Instance.KeyEvent |> ignore
+        Window.Instance.KeyEvent.Add(fun ev ->
+            match ev.Key.State, ev.Key.KeyPressedName with
+            | Key.StateType.Down, "XF86Back" -> this.Exit()
+            | _ -> ()
+        )
 
 
     override this.OnCreate() =
