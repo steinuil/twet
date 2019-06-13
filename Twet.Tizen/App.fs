@@ -20,10 +20,11 @@ module Core =
     open Fabulous.DynamicViews
 
     let view model dispatch =
-        View.CirclePage(
+        View.ContentPage(
             content = View.StackLayout(
                 orientation = StackOrientation.Horizontal,
                 horizontalOptions = LayoutOptions.Center,
+                verticalOptions = LayoutOptions.CenterAndExpand,
                 children = [
                     View.Label(
                         text = model.Text,
@@ -43,25 +44,3 @@ type FabulousApp () as app =
         Fabulous.Core.Program.mkSimple Core.init Core.update Core.view
         |> Fabulous.Core.Program.runWithDynamicView app
         |> ignore
-
-
-open Tizen.Wearable.CircularUI.Forms
-
-type XamlApp () =
-    inherit Application()
-
-    do
-        let stackLayout(children: list<View>) =
-            let l =
-                StackLayout(
-                    Orientation = StackOrientation.Vertical,
-                    HorizontalOptions = LayoutOptions.Center
-                )
-            for child in children do l.Children.Add(child)
-            l
-        base.MainPage <- CirclePage(
-            Content = stackLayout([
-                Label(Text = "SUP")
-                Label(Text = "XAML")
-            ])
-        )

@@ -9,7 +9,6 @@ type Program () =
     override this.OnCreate () =
         base.OnCreate()
         this.LoadApplication(App.FabulousApp())
-        // this.LoadApplication(App.XamlApp())
 
 [<EntryPoint>]
 let main args =
