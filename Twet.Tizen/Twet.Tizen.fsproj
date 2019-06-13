@@ -19,7 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="TwetApp.fs" />
+    <Compile Include="CircularUIExtension.fs" />
+    <Compile Include="App.fs" />
     <Compile Include="Twet.Tizen.fs" />
   </ItemGroup>
 
@@ -29,8 +30,9 @@
       <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>
     <PackageReference Include="Tizen.NET.Sdk" Version="1.0.1" />
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
     <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.2.0" />
+    <PackageReference Include="Fabulous.Core" Version="0.35.0" />
   </ItemGroup>
 
 </Project>
