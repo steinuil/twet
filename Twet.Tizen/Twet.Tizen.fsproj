@@ -26,9 +26,7 @@
 
   <ItemGroup>
     <PackageReference Update="FSharp.Core" Version="$(TargetFSharpCoreVersion)" />
-    <PackageReference Include="Tizen.NET" Version="5.0.0.14629">
-      <ExcludeAssets>Runtime</ExcludeAssets>
-    </PackageReference>
+    <PackageReference Include="Tizen.NET" Version="5.0.0.14629" ExcludeAssets="Runtime" />
     <PackageReference Include="Tizen.NET.Sdk" Version="1.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
     <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.2.0" />

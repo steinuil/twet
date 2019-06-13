@@ -20,8 +20,8 @@ module Core =
     open Fabulous.DynamicViews
 
     let view model dispatch =
-        View.ContentPage(
-            content = View.StackLayout(
+        View.CirclePage(
+            content = View.CircleStackLayout(
                 orientation = StackOrientation.Horizontal,
                 horizontalOptions = LayoutOptions.Center,
                 verticalOptions = LayoutOptions.CenterAndExpand,
